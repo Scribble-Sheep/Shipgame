@@ -1,15 +1,11 @@
 extends KinematicBody2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 export var speed = 20
 
-var direction: int = 0
 var velocity: Vector2 = Vector2.ZERO
-
-var rng = RandomNumberGenerator.new()
+var origin: Vector2 = self.get_position()
+var target: Vector2
+var hit: KinematicCollision2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,11 +14,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	
-	if (Input.is_action_just_pressed("ui_accept")):
-		rng.randomize()
-		velocity.x = rng.randf_range(-160,160)
-		velocity.y = rng.randf_range(-60,60)
+	if (Input.is_action_just_pressed("fire")):
+		target = get_local_mouse_position()
+		velocity = target - origin
 		velocity = velocity.normalized()
-	
-	move_and_collide(velocity * speed * delta)
+		velocity = velocity * speed * delta
+	hit = move_and_collide(velocity)
+	if (hit):
+		print ("Bitch get out of my way, ", hit.collider.name)
