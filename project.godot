@@ -61,6 +61,15 @@ fire={
  ]
 }
 
+[layer_names]
+
+2d_render/layer_1="Ship"
+2d_render/layer_2="Fauna"
+2d_render/layer_3="Torpedo"
+2d_physics/layer_1="Ship"
+2d_physics/layer_2="Fauna"
+2d_physics/layer_3="Torpedo"
+
 [mono]
 
 project/assembly_name="Shipgame"

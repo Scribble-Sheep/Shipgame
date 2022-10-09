@@ -20,6 +20,7 @@ func _physics_process(delta):
 	if (hit):
 		print ("Bitch get out of my way, ", hit.collider.name)
 		
+		
 func  calculate_velocity(_target: Vector2, _origin: Vector2, _speed: int, _delta):
 	var _velocity = _target - _origin
 	_velocity = _velocity.normalized()
