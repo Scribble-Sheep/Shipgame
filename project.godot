@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "BaseTarget",
+"language": "GDScript",
+"path": "res://Code/BaseTarget.gd"
+}, {
+"base": "BaseTarget",
+"class": "DebugTarget",
+"language": "GDScript",
+"path": "res://Code/DebugTarget.gd"
+}, {
+"base": "Node",
+"class": "TorpedoManager",
+"language": "GDScript",
+"path": "res://TorpedoManager.gd"
+} ]
+_global_script_class_icons={
+"BaseTarget": "",
+"DebugTarget": "",
+"TorpedoManager": ""
+}
+
 [application]
 
 config/name="Shipgame"
