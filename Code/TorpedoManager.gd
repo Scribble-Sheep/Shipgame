@@ -14,4 +14,19 @@ func _ready():
 	for i in Indicators.size():
 		var _torpedo = torpedoScene.instance()
 		_torpedo.torpedoIndicator = Indicators[i]
-		add_child(_torpedo)
+		_torpedo.connect("torpedoDie", self, "haha")
+		
+func _process(delta):
+	if (Input.is_action_just_pressed("fire")):
+		print("FIRE")
+		
+	
+func haha(instance):
+	print ("haha you died, ", instance)
+
+func findValidTorpedo(torpedoArray):
+	for torpedo in torpedoArray:
+		pass #find torpedo that's not in scene and is loaded.
+
+#if (Input.is_action_just_pressed("fire")):
+	#velocity = calculate_velocity(get_local_mouse_position(), origin, speed, delta)

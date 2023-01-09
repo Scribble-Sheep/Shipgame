@@ -3,6 +3,8 @@ extends KinematicBody2D
 
 export var speed: int = 20
 
+signal torpedoDie
+
 var torpedoIndicator = null
 var velocity: Vector2 = Vector2.ZERO
 var origin: Vector2 = self.get_position()
@@ -17,9 +19,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if (Input.is_action_just_pressed("fire")):
-		velocity = calculate_velocity(get_local_mouse_position(), origin, speed, delta)
-		
 	hit = move_and_collide(velocity)
 	if (hit and hit.collider.has_method("takeDamage")):
 		hit.collider.takeDamage()
@@ -33,6 +32,7 @@ func  calculate_velocity(_target: Vector2, _origin: Vector2, _speed: int, _delta
 	
 func self_destruct():
 	print("I SHOULD BE DEAAAAAAD", position)
+	emit_signal("torpedoDie", self)
 	pass
 
 
