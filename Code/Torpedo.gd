@@ -11,10 +11,8 @@ var hit: KinematicCollision2D
 var loaded: bool = true
 
 func _ready():
-	randomize()
-	var sprtie = get_node("Sprite")
-	sprtie.rotate(randi() % 360)
 	print ("hehe")
+	print(get_children())
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -34,7 +32,6 @@ func  launch(_target: Vector2, _origin: Vector2, _speed: int, _delta):
 func self_destruct():
 	print("I SHOULD BE DEAAAAAAD", position)
 	emit_signal("torpedoDie", self)
-	remove_child(self)
 	pass
 
 

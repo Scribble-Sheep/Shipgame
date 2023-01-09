@@ -13,11 +13,11 @@ position = Vector2( 160, 90 )
 
 [node name="DebugTarget" parent="." instance=ExtResource( 3 )]
 position = Vector2( 77, -9 )
-collision_layer = 2
 radius = 90.0
 
 [node name="TorpedoManager" type="Node2D" parent="."]
 script = ExtResource( 4 )
+speed = 100
 
 [node name="WorldGuiHolder" type="Node2D" parent="."]
 visible = false

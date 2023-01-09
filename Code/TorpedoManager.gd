@@ -31,10 +31,14 @@ func _attemptFire(_torpedos, delta):
 		return false
 	else:
 		add_child(_torpedos[Index])
+		_torpedos[Index].transform.origin = get_position()
 		_torpedos[Index].launch(get_local_mouse_position(), get_position(), speed, delta)
 	
 func haha(instance):
-	print ("haha you died, ", instance)
+	call_deferred("remove_torpedo", instance)
+
+func remove_torpedo(instance):
+	remove_child(instance)
 
 func findValidTorpedo(torpedoArray):
 	#find torpedo that's not in scene and is loaded.
