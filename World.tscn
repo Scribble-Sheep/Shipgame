@@ -17,15 +17,15 @@ radius = 90.0
 
 [node name="TorpedoManager" type="Node2D" parent="."]
 script = ExtResource( 4 )
-speed = 100
+speed = 200
 
 [node name="WorldGuiHolder" type="Node2D" parent="."]
-visible = false
 position = Vector2( -160, -90 )
 
 [node name="WorldGUI" parent="WorldGuiHolder" instance=ExtResource( 5 )]
 
 [node name="CombatGuiHolder" type="Node2D" parent="."]
+visible = false
 position = Vector2( -160, -90 )
 
 [node name="CombatGui" parent="CombatGuiHolder" instance=ExtResource( 7 )]
