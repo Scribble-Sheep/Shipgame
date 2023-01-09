@@ -70,4 +70,6 @@ margin_right = 40.0
 margin_bottom = 14.0
 text = "Sped:
 rSped:
-Type:"
+Type:
+Health:"
+percent_visible = -0.0434783

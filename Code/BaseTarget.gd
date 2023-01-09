@@ -5,5 +5,5 @@ func move():
 	pass
 	
 func takeDamage():
-	print(self.name, " hit")
+	print(self.name, " hit, damage behavior not defined.")
 	pass
