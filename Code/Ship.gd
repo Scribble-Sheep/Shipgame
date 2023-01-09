@@ -8,13 +8,13 @@ extends Area2D
 
 
 func _on_Ship_mouse_entered():
-	print("Hooray!")
+	pass
 
 
 func _on_Ship_mouse_exited():
-	print("Bwuh!")
+	pass
 
 
 func _on_Ship_input_event(_viewport, event, _shape_idx):
 	if (event is InputEventMouseButton && event.pressed):
-		print("Aubuh!")
+		pass

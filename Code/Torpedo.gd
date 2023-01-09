@@ -1,15 +1,14 @@
 class_name Torpedo
 extends KinematicBody2D
 
-export var speed: int = 20
-
 signal torpedoDie
-
+#velocity = calculate_velocity(get_local_mouse_position(), origin, speed, delta)
 var torpedoIndicator = null
 var velocity: Vector2 = Vector2.ZERO
 var origin: Vector2 = self.get_position()
 var target: Vector2
 var hit: KinematicCollision2D
+var loaded: bool = true
 
 func _ready():
 	randomize()
@@ -24,15 +23,18 @@ func _physics_process(delta):
 		hit.collider.takeDamage()
 		self_destruct()
 		
-func  calculate_velocity(_target: Vector2, _origin: Vector2, _speed: int, _delta):
+func  launch(_target: Vector2, _origin: Vector2, _speed: int, _delta):
+	print(_target, _origin, _speed, " ", _delta)
 	var _velocity = _target - _origin
 	_velocity = _velocity.normalized()
 	_velocity = _velocity * _speed * _delta
+	velocity = _velocity
 	return _velocity
 	
 func self_destruct():
 	print("I SHOULD BE DEAAAAAAD", position)
 	emit_signal("torpedoDie", self)
+	remove_child(self)
 	pass
 
 

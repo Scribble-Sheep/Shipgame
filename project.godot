@@ -29,7 +29,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Code/Torpedo.gd"
 }, {
-"base": "Node",
+"base": "Node2D",
 "class": "TorpedoManager",
 "language": "GDScript",
 "path": "res://Code/TorpedoManager.gd"
