@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/Debug/DebugCompass.png" type="Texture" id=1]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="WorldGUI" type="Control"]
+margin_right = 320.0
+margin_bottom = 180.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CompassFrame" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -24.0
+margin_top = 4.0
+margin_right = -8.0
+margin_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 32, 32 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CompassFrame"]
+frames = SubResource( 1 )
+centered = false
+
+[node name="TickerPanel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -160.0
+margin_top = -16.0
+margin_right = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 0, 16 )
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 12
+
+[node name="Ticker" type="Label" parent="TickerPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -0.128998
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 7
+size_flags_vertical = 3
+text = "Not Hehe"
+align = 1
+valign = 2
+uppercase = true
+
+[node name="DebugInfo" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Sped:
+rSped:
+Type:"
