@@ -10,4 +10,3 @@ func _process(delta):
 	d += delta
 	position = Vector2(sin(d * speed) * radius,cos(d*speed) * radius)
 	radius -= 1 *delta
-

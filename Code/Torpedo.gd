@@ -14,8 +14,7 @@ func _ready():
 	print ("hehe")
 	print(get_children())
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	hit = move_and_collide(velocity)
 	if (hit and hit.collider.has_method("takeDamage")):
 		hit.collider.takeDamage()

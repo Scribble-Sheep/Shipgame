@@ -38,7 +38,8 @@ func haha(instance):
 	call_deferred("remove_torpedo", instance)
 
 func remove_torpedo(instance):
-	remove_child(instance)
+	if is_a_parent_of(instance):
+		remove_child(instance)
 
 func findValidTorpedo(torpedoArray):
 	#find torpedo that's not in scene and is loaded.
