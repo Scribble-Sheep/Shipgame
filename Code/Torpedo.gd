@@ -1,15 +1,19 @@
+class_name Torpedo
 extends KinematicBody2D
 
 export var speed: int = 20
 
+var torpedoIndicator = null
 var velocity: Vector2 = Vector2.ZERO
 var origin: Vector2 = self.get_position()
 var target: Vector2
 var hit: KinematicCollision2D
 
-# Called when the node enters the scene tree for the first time.
-#func _ready():
-#	pass
+func _ready():
+	randomize()
+	var sprtie = get_node("Sprite")
+	sprtie.rotate(randi() % 360)
+	print ("hehe")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -28,7 +32,7 @@ func  calculate_velocity(_target: Vector2, _origin: Vector2, _speed: int, _delta
 	return _velocity
 	
 func self_destruct():
-	print("I SHOULD BE DEAAAAAAD")
+	print("I SHOULD BE DEAAAAAAD", position)
 	pass
 
 

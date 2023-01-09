@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Sprites/Debug/DebugTorpedo.png" type="Texture" id=1]
+[ext_resource path="res://Code/TorpedoIndicator.gd" type="Script" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -18,7 +19,8 @@ mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="TorpedoIndicator" type="AnimatedSprite" parent="." groups=["TorpedoIndicators"]]
 position = Vector2( 3, 0 )
 frames = SubResource( 1 )
 centered = false
+script = ExtResource( 2 )
