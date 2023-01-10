@@ -1,12 +1,8 @@
 class_name DebugTarget
 extends BaseTarget
 
-var d: float = 0
-
-export var radius: float = 60
-export var speed: float = 2.0
-
-func _process(delta):
-	d += delta
-	position = Vector2(sin(d * speed) * radius,cos(d*speed) * radius)
-	radius -= 1 *delta
+#Automatically called by the parent _process	
+func move(_delta, _angle, _rotspeed, _radius, _closingspeed):
+	_angle+=_rotspeed*_delta
+	_radius-=_closingspeed*_delta
+	position=polar2cartesian(_radius, _angle)
