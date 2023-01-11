@@ -11,34 +11,26 @@
 position = Vector2( 160, 90 )
 
 [node name="RadarLayer" type="CanvasLayer" parent="."]
-layer = -1
-offset = Vector2( 160, 90 )
+offset = Vector2( 195, 90 )
 scale = Vector2( 0.5, 0.5 )
-transform = Transform2D( 0.5, 0, 0, 0.5, 160, 90 )
+transform = Transform2D( 0.5, 0, 0, 0.5, 195, 90 )
 
 [node name="RadarOrigin" type="Node2D" parent="RadarLayer"]
 position = Vector2( 160, 90 )
-
-[node name="ColorRect" type="ColorRect" parent="RadarLayer/RadarOrigin"]
-modulate = Color( 0.00784314, 0.0627451, 0.0901961, 1 )
-show_behind_parent = true
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -160.0
-margin_top = -90.0
-margin_right = 160.0
-margin_bottom = 90.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Sprite" type="Sprite" parent="RadarLayer/RadarOrigin"]
 texture = ExtResource( 2 )
 
 [node name="DebugTarget" parent="RadarLayer/RadarOrigin" instance=ExtResource( 3 )]
-position = Vector2( 60, 0 )
+position = Vector2( 90, 0 )
+
+[node name="Polygon2D" type="Polygon2D" parent="RadarLayer/RadarOrigin"]
+z_index = -1
+z_as_relative = false
+color = Color( 0.0509804, 0.184314, 0.2, 1 )
+polygon = PoolVector2Array( 0, -90, 63, -63, 90, 0, 63, 63, 0, 90, -63, 63, -90, 0, -63, -63 )
 
 [node name="MainCamera" type="Camera2D" parent="."]
-position = Vector2( 0, 90 )
 offset = Vector2( -160, -90 )
 anchor_mode = 0
 current = true
@@ -47,7 +39,7 @@ current = true
 
 [node name="TorpedoManager" type="Node2D" parent="."]
 script = ExtResource( 4 )
-speed = 200
+speed = 300
 
 [node name="WorldGuiHolder" type="Node2D" parent="."]
 position = Vector2( -160, -90 )

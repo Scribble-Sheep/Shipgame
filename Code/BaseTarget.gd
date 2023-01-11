@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 #Transforms
 var angle=0
-var radius = 60
+var radius = 90
 #Speeds
 var rotSpeed = 2
 var closingSpeed = 1
