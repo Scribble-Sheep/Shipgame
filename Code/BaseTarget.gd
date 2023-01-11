@@ -1,17 +1,21 @@
 class_name BaseTarget
 extends KinematicBody2D
 
+#Transforms
 var angle=0
-var rotspeed = 1
 var radius = 60
-var closingSpeed = 5
+#Speeds
+var rotSpeed = 2
+var closingSpeed = 2
+#Other
+var health: int = 3
 
 func _ready():
 	position = polar2cartesian(radius, angle)
 	pass
 
 func _process(delta):
-	move(delta, self.angle, self.rotspeed, self.radius, self.closingSpeed)
+	move(delta, self.angle, self.rotSpeed, self.radius, self.closingSpeed)
 	_updatePolarCoordinates()
 
 func _updatePolarCoordinates():
@@ -19,7 +23,7 @@ func _updatePolarCoordinates():
 	radius=polarCoords.x
 	angle=polarCoords.y
 
-func move(delta, _angle, _rotspeed, _radius, _closingspeed):
+func move(_delta, _angle, _rotspeed, _radius, _closingspeed):
 	print (self.name, " movement behavior not defined.")
 	pass
 	
