@@ -11,7 +11,6 @@ var hit: KinematicCollision2D
 var loaded: bool = true
 
 func _ready():
-	print ("hehe")
 	print(get_children())
 
 func _physics_process(_delta):
@@ -21,7 +20,6 @@ func _physics_process(_delta):
 		self_destruct()
 		
 func  launch(_target: Vector2, _origin: Vector2, _speed: int, _delta):
-	print(_target, _origin, _speed, " ", _delta)
 	var _velocity = _target - _origin
 	_velocity = _velocity.normalized()
 	_velocity = _velocity * _speed * _delta

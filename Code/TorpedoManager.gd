@@ -16,8 +16,7 @@ var shipTransform:Node2D
 func _ready():
 	torpedoLaunchNode = get_node(torpedoLaunchNodePath)
 	shipTransform = get_node(shipTransformPath)
-	print(torpedoLaunchNode, shipTransform)
-	var shipTransform = get_node(shipTransformPath)
+	shipTransform = get_node(shipTransformPath)
 	if (Indicators.size() != 3):
 		print ("something's wrong, we don't have 3 torpedo indicators.")
 	torpedos.resize(Indicators.size())

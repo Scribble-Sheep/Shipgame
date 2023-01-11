@@ -34,10 +34,10 @@ collision_layer = 2
 collision_mask = 5
 script = ExtResource( 2 )
 
-[node name="Icon" type="AnimatedSprite" parent="."]
+[node name="PingDot" type="AnimatedSprite" parent="."]
 scale = Vector2( 2, 2 )
 frames = SubResource( 5 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
