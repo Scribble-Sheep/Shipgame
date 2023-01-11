@@ -6,7 +6,7 @@ var angle=0
 var radius = 60
 #Speeds
 var rotSpeed = 2
-var closingSpeed = 2
+var closingSpeed = 1
 #Other
 var health: int = 3
 var oldPos = Vector2.ZERO#debug code
