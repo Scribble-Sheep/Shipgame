@@ -24,9 +24,9 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 
 [node name="RadarLayer" type="CanvasLayer" parent="."]
-offset = Vector2( 195, 90 )
+offset = Vector2( 192, 87 )
 scale = Vector2( 0.5, 0.5 )
-transform = Transform2D( 0.5, 0, 0, 0.5, 195, 90 )
+transform = Transform2D( 0.5, 0, 0, 0.5, 192, 87 )
 
 [node name="RadarOrigin" type="Node2D" parent="RadarLayer"]
 position = Vector2( 160, 90 )
@@ -41,7 +41,7 @@ position = Vector2( 90, 0 )
 z_index = -1
 z_as_relative = false
 color = Color( 0.0509804, 0.184314, 0.2, 1 )
-polygon = PoolVector2Array( 0, -90, 63, -63, 90, 0, 63, 63, 0, 90, -63, 63, -90, 0, -63, -63 )
+polygon = PoolVector2Array( 0, -95, 36, -87, 67, -67, 87, -36, 95, 0, 87, 36, 67, 67, 36, 87, 0, 95, -36, 87, -67, 67, -87, 36, -95, 0, -87, -36, -67, -67, -36, -87 )
 
 [node name="MainCamera" type="Camera2D" parent="."]
 offset = Vector2( -160, -90 )
