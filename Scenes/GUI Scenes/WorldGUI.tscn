@@ -63,7 +63,7 @@ align = 1
 valign = 2
 uppercase = true
 
-[node name="DebugInfo" type="Label" parent="."]
+[node name="DebugInfo" type="Label" parent="." groups=["Debug Labels"]]
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 40.0
@@ -72,4 +72,3 @@ text = "Sped:
 rSped:
 Type:
 Health:"
-percent_visible = -0.0434783

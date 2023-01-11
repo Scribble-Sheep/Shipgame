@@ -11,7 +11,7 @@ func _ready():
 		print ("something's wrong, we don't have 3 torpedo indicators.")
 	torpedos.resize(Indicators.size())
 	var _torpedo = null
-	print (Indicators)
+	
 	for i in Indicators.size():
 		_torpedo = torpedoScene.instance()
 		_torpedo.torpedoIndicator = Indicators[i]
@@ -26,7 +26,6 @@ func _process(delta):
 	
 func _attemptFire(_torpedos, delta):
 	var Index = findValidTorpedo(_torpedos)
-	print(Index)
 	if(Index == null):
 		return false
 	else:

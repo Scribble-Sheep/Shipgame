@@ -27,3 +27,4 @@ position = Vector2( -160, -90 )
 position = Vector2( -160, -90 )
 
 [node name="CombatGui" parent="CombatGuiHolder" instance=ExtResource( 7 )]
+visible = false
