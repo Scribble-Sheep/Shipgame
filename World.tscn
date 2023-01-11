@@ -53,6 +53,8 @@ current = true
 [node name="TorpedoManager" type="Node2D" parent="."]
 script = ExtResource( 4 )
 speed = 300
+torpedoLaunchNodePath = NodePath("../RadarLayer/RadarOrigin")
+shipTransformPath = NodePath("../Ship")
 
 [node name="WorldGuiHolder" type="Node2D" parent="."]
 position = Vector2( -160, -90 )

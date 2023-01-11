@@ -34,6 +34,10 @@ func _debugUpdateLabel():#debug code
 	debugLabels[0].text +="Type: " + name + "\n"
 	debugLabels[0].text +="Health: " + str(health)
 	
+## Drop the object's Ping wherever it may be at this point in time.
+func _dropPing():
+	pass
+	
 # Instance defined methods becaus gdscript doesn't allow abstraction
 func move(_delta, _angle, _rotspeed, _radius, _closingspeed):
 	print (self.name, " movement behavior not defined.")
